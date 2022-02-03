@@ -1,0 +1,35 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+
+[genericForm contactform]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[arrival] = "required|date"
+rules[departure] = "required|date"
+rules_messages[name.required] = "Jméno je povinné"
+rules_messages[email.required] = "E-mail je povinný"
+rules_messages[email.email] = "Nesprávný formát e-mailu"
+rules_messages[arrival.required] = "Datum příjezdu je povinný"
+rules_messages[departure.required] = "Datum odjezdu je povinný"
+messages_success = "Vaše rezervace byla úspěšně odeslána."
+messages_errors = "Při odesílání rezervace nastaly chyby."
+mail_enabled = 1
+mail_recipients[] = "zap@hucr.cz"
+mail_replyto = "email"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+{% partial "homepage/banner" %}
+{% partial "homepage/accommodation" %}
+{% partial "homepage/services" %}
+{% partial "homepage/gallery" %}
+{% partial "homepage/prices" %}
+{% partial "homepage/prohibitions" %}
+{% partial "homepage/contact" %}

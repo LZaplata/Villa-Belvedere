@@ -1,0 +1,125 @@
+<form data-request="{{ __SELF__ }}::onFormSubmit">
+    {{ form_token() }}
+
+    <div id="{{ __SELF__ }}_forms_flash" class="mt-0"></div>
+
+    <div class="row g-4">
+        <div class="col-12">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-person"></i>
+                </span>
+
+                <input type="text" id="name" name="name" class="form-control" placeholder="Jméno">
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                </span>
+
+                <input type="text" id="email" name="email" class="form-control" placeholder="E-mail">
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-telephone"></i>
+                </span>
+
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Telefon">
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-calendar-check"></i>
+                </span>
+
+                <input
+                    type="text"
+                    id="arrival"
+                    name="arrival"
+                    class="form-control"
+                    placeholder="Datum příjezdu">
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-calendar-x"></i>
+                </span>
+
+                <input
+                    type="text"
+                    id="departure"
+                    name="departure"
+                    class="form-control"
+                    placeholder="Datum odjezdu">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="input-group">
+                <span class="input-group-text align-items-start">
+                    <i class="bi bi-pencil"></i>
+                </span>
+
+                <textarea id="text" name="text" class="form-control" rows="8" placeholder="Vaše zpráva"></textarea>
+            </div>
+        </div>
+
+        <div class="col-12 fs-15">
+            Odesláním formuláře souhlasím se
+
+            <a href="{{ "gdpr"|page }}" class="link-blue text-orange-hover transition-base text-decoration-none">
+                zpracováním osobních údajů
+            </a>.
+        </div>
+
+        <div class="col-12">
+            <button id="button" type="submit" class="btn btn-blue">
+                Odeslat <i class="bi bi-chevron-right fs-15"></i>
+            </button>
+        </div>
+
+        <div class="form-group d-none">
+            {% partial "@recaptcha" %}
+        </div>
+    </div>
+</form>
+
+{% put scripts %}
+    <script>
+        const arrivalDatePicker = MCDatepicker.create({
+            el: "#arrival",
+            bodyType: "inline",
+            dateFormat: "d.m.yyyy",
+            autoClose: true,
+            closeOnBlur: true,
+            firstWeekday: 1,
+            customWeekDays: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"],
+            customMonths: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
+            customClearBTN: 'Smazat',
+            customCancelBTN: 'Zrušit',
+        });
+
+        const departureDatePicker = MCDatepicker.create({
+            el: "#departure",
+            bodyType: "inline",
+            dateFormat: "d.m.yyyy",
+            autoClose: true,
+            closeOnBlur: true,
+            firstWeekday: 1,
+            customWeekDays: ["Neděle", "Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota"],
+            customMonths: ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"],
+            customClearBTN: 'Smazat',
+            customCancelBTN: 'Zrušit',
+        });
+    </script>
+{% endput %}

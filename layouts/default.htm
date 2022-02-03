@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+
+        <link rel="icon" href="{{ 'assets/images/favicon.png'|theme }}" />
+
+        <title>{{ this.page.title }} | Penzion Villa Belvedere **** | Janské Lázně</title>
+
+        {% styles %}
+
+        <link rel="stylesheet" href="{{ [
+            'assets/css/theme.css',
+            'assets/css/bootstrap-icons.css',
+            'assets/css/icons.css',
+            'assets/css/swiper-bundle.css',
+            'assets/css/mc-calendar.min.css',
+        ]|theme }}" />
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        {% partial "header" %}
+
+        <main>
+            {% page %}
+        </main>
+
+        {% partial "support" %}
+        {% partial "footer" %}
+        {% partial "copyright" %}
+        {% partial "offcanvas" %}
+
+        <script src="{{ [
+            'assets/js/jquery.min.js',
+            'assets/js/popper.js',
+            'assets/js/theme.js',
+            'assets/js/swiper-bundle.js',
+            'assets/js/mc-calendar.min.js'
+        ]|theme }}"></script>
+
+        <script src="{{ 'assets/js/bootstrap.js'|theme }}"></script>
+
+        {% framework %}
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>

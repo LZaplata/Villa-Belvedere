@@ -1,0 +1,32 @@
+{% spaceless %}
+
+    <div class="alert alert-{{ type }} alert-dismissible fade show mb-4" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+        {% if title %}
+            <h6>{{ title }}</h6>
+        {% endif %}
+
+        {% if content %}
+            <p class="mb-0">{{ content }}</p>
+        {% endif %}
+
+        {% if list %}
+            <ul class="mb-0">
+                {% for item in list %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    {% if jscript %}
+        <script>
+            {% if errors %}
+                var errors = JSON.parse('{{ errors|raw }}');
+            {% endif %}
+            {{ jscript|raw }}
+        </script>
+    {% endif %}
+
+{% endspaceless %}

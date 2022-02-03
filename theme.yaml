@@ -1,0 +1,10 @@
+name: 'Villa Belvedere'
+description: 'Theme for mountain villa Belvedere in Giant Mountains in Janské Lázně.'
+author: 'Lukáš Záplata'
+homepage: ''
+authorCode: LZaplata
+code: villabelvedere
+parent: ''
+database: '0'
+require:
+    - martin.forms

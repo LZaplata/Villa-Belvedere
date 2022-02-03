@@ -1,0 +1,8 @@
+node_modules
+meta
+assets/css/*.*
+assets/css/fonts/*.*
+assets/js/*
+!assets/js/theme.js
+package-lock.json
+.themelock

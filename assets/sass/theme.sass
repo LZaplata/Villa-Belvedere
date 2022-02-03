@@ -1,0 +1,96 @@
+@import "variables"
+
+/***** toggle main menu dropdown on hover *****/
+
+//header
+    #menu
+        .dropdown
+            .dropdown-menu
+                display: none
+
+                &.show
+                    margin-top: -2px !important
+
+            &:hover, &:focus, &:active
+                .dropdown-menu
+                    display: block
+
+/***** end toggle main menu dropdown on hover *****/
+
+html
+    scroll-behavior: smooth
+
+.btn-blue
+    @include button-variant($blue, $blue, $white, $orange, $orange, $white)
+    font-weight: $font-weight-bold
+
+.btn-outline-blue
+    @include button-variant(transparent, $blue, $white, $orange, $orange, $white)
+
+.bg-brown-pattern
+    background: url("../images/pattern-brown.png")
+
+.bg-light-pattern
+    background: url("../images/pattern-light.png")
+
+header
+    #logo
+        img
+            @include media-breakpoint-down(sm)
+                max-width: 250px
+
+    .nav
+        li
+            a
+                font-family: $headings-font-family
+
+#services
+    .col
+        .icon
+            img
+                height: 150px
+
+#cenik
+    .room
+        .row
+            .capacity, .price
+                .card
+                    &.h-100
+                        @include media-breakpoint-down(xl)
+                            height: auto !important
+
+#kontakt
+    form
+        .input-group
+            .input-group-text
+                padding-right: 0
+
+            .form-control
+                padding-left: .5rem
+
+    .address
+        img
+            @include media-breakpoint-down(sm)
+                height: 20px
+
+            @include media-breakpoint-down(lg)
+                height: 25px
+
+#copyright
+    .signature
+        span
+            mask: url("../images/signature.svg")
+            -webkit-mask: url("../images/signature.svg")
+            width: 85px
+            height: 25px
+            mask-size: cover
+            display: block
+
+#offcanvas
+    .offcanvas-body
+        .nav
+            li
+                a
+                    text-align: center
+                    font-size: $font-size-39
+                    font-family: $headings-font-family

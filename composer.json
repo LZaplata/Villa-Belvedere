@@ -1,0 +1,9 @@
+{
+    "name": "lzaplata/villabelvedere-theme",
+    "type": "october-theme",
+    "description": "Theme for mountain villa Belvedere in Giant Mountains in Jansk\u00e9 L\u00e1zn\u011b.",
+    "require": {
+        "composer/installers": "~1.0",
+        "lzaplata/gallery-plugin": "dev-master"
+    }
+}
