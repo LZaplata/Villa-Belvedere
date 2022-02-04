@@ -95,7 +95,7 @@ $utilities:                         map-merge($utilities, ("font-size": map-merg
 $utilities:                         map-merge($utilities, ("font-family": (property: font-family, class: ff, values: ("base": $font-family-base))))
 $utilities:                         map-merge($utilities, ("color-hover": (property: color, class: text, values: ("secondary": $secondary, "orange": $orange), state: hover)))
 //$utilities:                         map-merge($utilities, ("border-hover": (property: border-color, class: border, values: ("secondary": $secondary), state: hover)))
-//$utilities:                         map-merge($utilities, ("bg-hover": (property: background-color, class: bg, values: ("secondary": $secondary, "blue-light": $blue-light, "white": $white), state: hover)))
+$utilities:                         map-merge($utilities, ("bg-hover": (property: background-color, class: bg, values: ("secondary": $secondary), state: hover)))
 $utilities:                         map-merge($utilities, ("transition": (property: transition, class: transition, values: ("base": $transition-base))))
 
 @import "bootstrap/scss/bootstrap"
