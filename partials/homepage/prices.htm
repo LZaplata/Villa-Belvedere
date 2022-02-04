@@ -16,10 +16,22 @@
             {% partial "homepage/apartments/03.htm" %}
         </div>
 
+        <div class="collapse" id="more-apartments">
+            <div class="room mt-5">
+                {% partial "homepage/apartments/04.htm" %}
+            </div>
+        </div>
+
         <div class="mt-5">
             <p class="mb-0 text-center">
-                <a href="" class="btn btn-blue">
-                    Zobrazit další pokoje <i class="bi bi-chevron-down fs-15"></i>
+                <a href="#more-apartments" class="btn btn-blue" data-bs-toggle="collapse">
+                    <span>
+                        Zobrazit další pokoje <i class="bi bi-chevron-down fs-15"></i>
+                    </span>
+
+                    <span class="d-none">
+                        Skrýt další pokoje <i class="bi bi-chevron-up fs-15"></i>
+                    </span>
                 </a>
             </p>
         </div>
