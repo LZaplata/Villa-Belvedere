@@ -12,9 +12,9 @@
    version="1.1"
    x="0px"
    y="0px"
-   width="326.504"
-   height="326.5"
-   viewBox="0 0 326.504 326.5"
+   width="120.00147"
+   height="120"
+   viewBox="0 0 120.00147 120"
    enable-background="new 0 0 462.245 424"
    xml:space="preserve"
    id="svg224"
@@ -41,8 +41,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.55660377"
-     inkscape:cx="163.2535"
-     inkscape:cy="163.25"
+     inkscape:cx="-165.52616"
+     inkscape:cy="163.25001"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -50,9 +50,9 @@
      id="Vrstva_2"
      display="none"
      style="display:none"
-     transform="translate(-67.869,-48.75)" /><g
+     transform="translate(-67.869,-255.25)" /><g
      id="Vrstva_1"
-     transform="translate(-67.869,-48.75)"><g
+     transform="matrix(0.36753446,0,0,0.36753446,-24.944196,-17.917305)"><g
        id="g221"><g
          id="g217"><g
            id="g215"><path
@@ -60,7 +60,7 @@
              id="path203"
              inkscape:connector-curvature="0"
              style="fill:#71bdf1" /><polygon
-             points="167.953,217.486 158.379,217.445 158.379,260.33 167.953,260.371 "
+             points="167.953,260.371 167.953,217.486 158.379,217.445 158.379,260.33 "
              id="polygon205"
              style="fill:#71bdf1" /><path
              d="m 142.582,218.158 v 41.422 c 1.529,0.453 3.125,0.721 4.781,0.729 l 4.791,0.021 v -42.885 l -4.602,-0.023 c -1.722,-0.006 -3.382,0.266 -4.97,0.736 z"
