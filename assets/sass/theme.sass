@@ -1,5 +1,12 @@
 @import "variables"
 
+@font-face
+    font-family: "cocosignum"
+    src: url("../css/fonts/cocosignum_maiuscoletto_heavy_trial-webfont.woff2") format("woff2"),
+    url("../css/fonts/cocosignum_maiuscoletto_heavy_trial-webfont.woff") format("woff")
+    font-weight: normal
+    font-style: normal
+
 /***** toggle main menu dropdown on hover *****/
 
 //header
@@ -44,6 +51,10 @@ header
             a
                 font-family: $headings-font-family
 
+#banner
+    h1
+        font-family: "cocosignum"
+
 #services
     .col
         .icon
@@ -58,6 +69,11 @@ header
                     &.h-100
                         @include media-breakpoint-down(xl)
                             height: auto !important
+
+#prohibitions
+    img
+        @include media-breakpoint-up(xl)
+            max-width: 86px
 
 #kontakt
     form
@@ -77,9 +93,6 @@ header
                 height: 25px
 
 #copyright
-    @include media-breakpoint-down(sm)
-        font-size: $font-size-15
-
     .signature
         span
             mask: url("../images/signature.svg")

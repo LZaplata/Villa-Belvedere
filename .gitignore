@@ -2,6 +2,8 @@ node_modules
 meta
 assets/css/*.*
 assets/css/fonts/*.*
+!assets/css/fonts/cocosignum_maiuscoletto_heavy_trial-webfont.woff
+!assets/css/fonts/cocosignum_maiuscoletto_heavy_trial-webfont.woff2
 assets/js/*
 !assets/js/theme.js
 package-lock.json
