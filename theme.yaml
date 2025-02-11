@@ -7,4 +7,5 @@ code: villabelvedere
 parent: ''
 database: '0'
 require:
-    - martin.forms
+    - lzaplata.gallery
+    - janvince.smallcontactform

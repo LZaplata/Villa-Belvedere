@@ -12,13 +12,37 @@
             {% partial "homepage/apartments/02.htm" %}
         </div>
 
-        <div class="room mt-5">
-            {% partial "homepage/apartments/03.htm" %}
-        </div>
-
         <div class="collapse" id="more-apartments">
             <div class="room mt-5">
+                {% partial "homepage/apartments/03.htm" %}
+            </div>
+
+            <div class="room mt-5">
                 {% partial "homepage/apartments/04.htm" %}
+            </div>
+
+            <div class="room mt-5">
+                {% partial "homepage/apartments/05.htm" %}
+            </div>
+
+{#            <div class="room mt-5">#}
+{#                {% partial "homepage/apartments/06.htm" %}#}
+{#            </div>#}
+
+            <div class="room mt-5">
+                {% partial "homepage/apartments/07.htm" %}
+            </div>
+
+            <div class="room mt-5">
+                {% partial "homepage/apartments/08.htm" %}
+            </div>
+
+            <div class="room mt-5">
+                {% partial "homepage/apartments/09.htm" %}
+            </div>
+
+            <div class="room mt-5">
+                {% partial "homepage/apartments/10.htm" %}
             </div>
         </div>
 
@@ -37,3 +61,14 @@
         </div>
     </div>
 </div>
+
+{% put scripts %}
+    <script>
+        lightGallery(document.getElementById("cenik"), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            selector: ".room .img",
+            galleryId: "cenik",
+        });
+    </script>
+{% endput %}
