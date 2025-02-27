@@ -14,13 +14,16 @@
 
 <div class="row g-2 mt-2">
     <div class="col-12 col-md-6 col-xl-4">
-        <div class="card h-100">
-            <div class="card-body fs-16">
-                <span class="fw-semi-bold">Velikost:</span> 47 m<sup>2</sup><br>
-                <span class="fw-semi-bold">Ložnice 1:</span><br class="d-sm-none"> 1 velká manželská postel <br>
-                <span class="fw-semi-bold">Ložnice 2:</span><br class="d-sm-none"> 3 jednolůžkové postele
-            </div>
-        </div>
+        <a href="{{ 'apartments/01.jpg'|media }}" class="img">
+            <img src="{{ 'apartments/01.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="Apartmán 1" class="img-fluid w-100">
+        </a>
+{#        <div class="card h-100">#}
+{#            <div class="card-body fs-16">#}
+{#                <span class="fw-semi-bold">Velikost:</span> 47 m<sup>2</sup><br>#}
+{#                <span class="fw-semi-bold">Ložnice 1:</span><br class="d-sm-none"> 1 velká manželská postel <br>#}
+{#                <span class="fw-semi-bold">Ložnice 2:</span><br class="d-sm-none"> 3 jednolůžkové postele#}
+{#            </div>#}
+{#        </div>#}
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
