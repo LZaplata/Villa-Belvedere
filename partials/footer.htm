@@ -4,8 +4,8 @@
             <div class="col col-sm-12 col-md">
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item d-inline-flex justify-content-center justify-content-md-start">
-                        <a href="{{ 'ubytovaci-rad'|page }}" class="nav-link fs-15 fw-normal px-0">
-                            Ubytovací řád
+                        <a href="{{ 'ubytovaci-rad'|page }}" class="nav-link fs-15 fw-normal px-0{% if this.page.id == "ubytovaci-rad" %} active{% endif %}">
+                            {{ "footer.nav.accommodation_rules"|trans }}
                         </a>
                     </li>
 
@@ -33,8 +33,18 @@
                 <img src="{{ 'assets/images/logo-footer.svg'|theme }}" alt="logo" class="">
             </div>
 
-            <div class="col text-center mt-5 d-sm-flex justify-content-sm-end align-items-sm-end flex-sm-column">
-                <p class="fs-15 mb-2">
+            <div class="col text-center mt-5 d-sm-flex align-items-sm-end flex-sm-column mt-md-0">
+                <ul class="nav nav-pills gap-2">
+                    {% for site in sitePicker.sites %}
+                        <li class="nav-item">
+                            <a href="{{ site.url }}" class="nav-link fs-15 fw-normal px-0 text-uppercase{% if this.site.code == site.code %} active{% endif %}">
+                                {{ site.locale }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <p class="fs-15 mb-2 mt-auto">
                     Sledujte nás
                 </p>
 
