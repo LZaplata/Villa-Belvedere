@@ -9,3 +9,4 @@ database: '0'
 require:
     - lzaplata.gallery
     - janvince.smallcontactform
+    - rainlab.translate
