@@ -1,17 +1,25 @@
 <ul id="main-menu" class="nav nav-pills {% if mobile %}flex-column{% endif %}">
     <li class="nav-item">
-        <a href="{{ 'homepage'|page }}/#ubytovani" class="nav-link">O ubytování</a>
+        <a href="{{ 'homepage'|page }}{% if this.locale == 'cs' %}/{% endif %}#{{ 'menu.about_us.slug'|trans }}" class="nav-link">
+            {{ "menu.about_us.title"|trans }}
+        </a>
     </li>
 
     <li class="nav-item">
-        <a href="{{ 'homepage'|page }}/#cenik" class="nav-link">Ceník a pokoje</a>
+        <a href="{{ 'homepage'|page }}{% if this.locale == 'cs' %}/{% endif %}#{{ 'menu.prices.slug'|trans }}" class="nav-link">
+            {{ "menu.prices.title"|trans }}
+        </a>
     </li>
 
     <li class="nav-item">
-        <a href="{{ 'homepage'|page }}/#fotogalerie" class="nav-link">Fotogalerie</a>
+        <a href="{{ 'homepage'|page }}{% if this.locale == 'cs' %}/{% endif %}#{{ 'menu.gallery.slug'|trans }}" class="nav-link">
+            {{ "menu.gallery.title"|trans }}
+        </a>
     </li>
 
     <li class="nav-item">
-        <a href="{{ 'homepage'|page }}/#kontakt" class="nav-link">Kontakt</a>
+        <a href="{{ 'homepage'|page }}{% if this.locale == 'cs' %}/{% endif %}#{{ 'menu.contact.slug'|trans }}" class="nav-link">
+            {{ "menu.contact.title"|trans }}
+        </a>
     </li>
 </ul>

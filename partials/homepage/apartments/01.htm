@@ -1,21 +1,21 @@
 <div class="row g-2">
     <div class="col-12 col-xl-8 fw-semi-bold">
-        Apartmán 1
+        {{ "apartment"|trans }} 1
     </div>
 
     <div class="col-2 d-none d-xl-block">
-        Kapacita
+        {{ "capacity"|trans }}
     </div>
 
     <div class="col-2 d-none d-xl-block">
-        Cena
+        {{ "price"|trans }}
     </div>
 </div>
 
 <div class="row g-2 mt-2">
     <div class="col-12 col-md-6 col-xl-4">
         <a href="{{ 'apartments/01.jpg'|media }}" class="img">
-            <img src="{{ 'apartments/01.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="Apartmán 1" class="img-fluid w-100">
+            <img src="{{ 'apartments/01.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="{{ "apartment"|trans }} 1" class="img-fluid w-100">
         </a>
 {#        <div class="card h-100">#}
 {#            <div class="card-body fs-16">#}
@@ -29,17 +29,14 @@
     <div class="col-12 col-md-6 col-xl-4">
         <div class="card h-100">
             <div class="card-body fs-16">
-                Tento útulný apartmán je vybaven třemi samostatnými pevnými lůžky, ideální pro malé skupiny nebo
-                přátele. Nabízí komfortní a klidné prostředí s vlastním bezbariérovým vchodem. Hosté mohou využít
-                satelitní televizi, Wi-Fi zdarma a šatní skříň. Koupelna je vybavena sprchovým koutem. Apartmán je
-                skvělou volbou pro ty, kdo hledají pohodlí a jednoduchý, praktický prostor.
+                {{ "apartment.01"|trans }}
             </div>
         </div>
     </div>
 
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 capacity">
         <p class="mb-2 mt-0 d-xl-none">
-            Kapacita
+            {{ "capacity"|trans }}
         </p>
 
         <div class="card bg-primary">
@@ -47,7 +44,7 @@
                 <p class="mb-0">
                     <i class="bi bi-person-fill"></i>x3 <br>
 
-                    3 osoby
+                    {{ "persons_count"|trans_choice(3, {value: 3}) }}
                 </p>
             </div>
         </div>
@@ -55,14 +52,14 @@
 
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 price">
         <p class="mb-2 mt-0 d-xl-none">
-            Cena
+            {{ "price"|trans }}
         </p>
 
         <div class="card bg-primary">
             <div class="card-body text-center fs-20 text-white d-flex align-items-center justify-content-center">
                 <p class="mb-0">
                     1950 Kč <br>
-                    / 1 noc
+                    / {{ "nights_count"|trans_choice(1, {value: 1}) }}
                 </p>
             </div>
         </div>

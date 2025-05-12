@@ -1,47 +1,42 @@
 <div class="row g-2">
     <div class="col-12 col-xl-8 fw-semi-bold">
-        Apartmán 2
+        {{ "apartment"|trans }} 2
     </div>
 
-    <div class="col-2 d-none">
-        Kapacita
+    <div class="col-2 d-none d-xl-block">
+        {{ "capacity"|trans }}
     </div>
 
-    <div class="col-2 d-none">
-        Cena
+    <div class="col-2 d-none d-xl-block">
+        {{ "price"|trans }}
     </div>
 </div>
 
 <div class="row g-2 mt-2">
     <div class="col-12 col-md-6 col-xl-4">
         <a href="{{ 'apartments/02.jpg'|media }}" class="img">
-            <img src="{{ 'apartments/02.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="Apartmán 2" class="img-fluid w-100">
+            <img src="{{ 'apartments/02.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="{{ "apartment"|trans }} 2" class="img-fluid w-100">
         </a>
-{#        <div class="card h-100">#}
-{#            <div class="card-body fs-16">#}
-{#                <span class="fw-semi-bold">Velikost:</span> 49 m<sup>2</sup><br>#}
-{#                <span class="fw-semi-bold">Ložnice 1:</span><br class="d-sm-none"> 1 velká manželská postel <br>#}
-{#                <span class="fw-semi-bold">Ložnice 2:</span><br class="d-sm-none"> 3 jednolůžkové postele <br>#}
-{#                <span class="fw-semi-bold">Obývací pokoj:</span><br class="d-sm-none"> 1 rozkládací pohovka#}
-{#            </div>#}
-{#        </div>#}
+        {#        <div class="card h-100">#}
+        {#            <div class="card-body fs-16">#}
+        {#                <span class="fw-semi-bold">Velikost:</span> 47 m<sup>2</sup><br>#}
+        {#                <span class="fw-semi-bold">Ložnice 1:</span><br class="d-sm-none"> 1 velká manželská postel <br>#}
+        {#                <span class="fw-semi-bold">Ložnice 2:</span><br class="d-sm-none"> 3 jednolůžkové postele#}
+        {#            </div>#}
+        {#        </div>#}
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
         <div class="card h-100">
             <div class="card-body fs-16">
-                Prostorný apartmán s manželskou postelí King size, jedním pevným lůžkem nabízí dostatek prostoru pro
-                rodiny nebo větší skupiny. Kromě komfortu je apartmán vybaven vlastním bezbariérovým vchodem, což
-                zajišťuje snadný přístup. Pokoj je vybaven satelitní televizí, Wi-Fi zdarma a šatní skříní. Součástí je
-                koupelna se sprchovým koutem. Tento apartmán je ideální pro ty, kdo chtějí pohodlné a prostorné
-                ubytování s veškerým vybavením.
+                {{ "apartment.02"|trans }}
             </div>
         </div>
     </div>
 
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 capacity">
         <p class="mb-2 mt-0 d-xl-none">
-            Kapacita
+            {{ "capacity"|trans }}
         </p>
 
         <div class="card bg-primary">
@@ -49,7 +44,7 @@
                 <p class="mb-0">
                     <i class="bi bi-person-fill"></i>x3 <br>
 
-                    3 osoby
+                    {{ "persons_count"|trans_choice(3, {value: 3}) }}
                 </p>
             </div>
         </div>
@@ -57,14 +52,14 @@
 
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 price">
         <p class="mb-2 mt-0 d-xl-none">
-            Cena
+            {{ "price"|trans }}
         </p>
 
         <div class="card bg-primary">
             <div class="card-body text-center fs-20 text-white d-flex align-items-center justify-content-center">
                 <p class="mb-0">
                     1950 Kč <br>
-                    / 1 noc
+                    / {{ "nights_count"|trans_choice(1, {value: 1}) }}
                 </p>
             </div>
         </div>

@@ -17,18 +17,12 @@
             </h1>
 
             <p class="mb-4 mb-md-0 mb-xl-4 fw-semi-bold fs-39 text-white text-center text-md-start lh-sm">
-                Rodinný penzion <br class="d-md-none">
-                na klidném <br class="d-none">
-                místě <br class="d-md-none">
-                v Janských Lázních, <br class="d-md-none d-xxl-block">
-                kde se mísí pohodlí <br class="d-lg-none">
-                s krásou horské <br class="d-md-none d-lg-block d-xl-none">
-                přírody a domácí péčí.
+                {% content "claim" %}
             </p>
 
             <p class="text-center text-xl-start mb-0 d-md-none d-xl-block">
-                <a href="#kontakt" class="btn btn-blue fw-bold">
-                    Rezervace
+                <a href="#{{ 'menu.contact.slug'|trans }}" class="btn btn-blue fw-bold">
+                    {{ "reservation"|trans }}
                 </a>
             </p>
         </div>

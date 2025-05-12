@@ -1,8 +1,10 @@
-<div id="kontakt" class="container-fluid bg-secondary py-5">
+<div id="{{ 'menu.contact.slug'|trans }}" class="container-fluid bg-secondary py-5">
     <div id="contact-container" class="container-lg">
         <div class="row">
             <div class="col-lg-7 col-xl-6">
-                <h2 class="mb-4">Rezervace</h2>
+                <h2 class="mb-4">
+                    {{ "reservation"|trans }}
+                </h2>
 
                 {% component "contactform" %}
             </div>

@@ -8,11 +8,11 @@
 
             <div class="col-12 mt-3 col-sm-8 mt-sm-0 d-md-flex align-items-center col-xl-6">
                 <p class="mb-0">
-                    Všechny pokoje jsou <span class="fw-bold">nekuřácké</span>
+                    {{ "non_smoking"|trans|content }}
 
                     <br class="d-none d-xxl-block">
 
-                    a zvířata <span class="fw-bold">nejsou</span> v objektu povolena.
+                    {{ "pets_not_allowed"|trans|content }}
                 </p>
             </div>
         </div>
@@ -24,7 +24,7 @@
 {#                </a>#}
 
                 <a href="{{ 'ubytovaci-rad'|page }}" class="btn btn-outline-blue">
-                    Ubytovací řád
+                    {{ "footer.nav.accommodation_rules"|trans }}
                 </a>
 
 {#                <a href="{{ 'historie'|page }}" class="btn btn-outline-blue ms-lg-4">#}

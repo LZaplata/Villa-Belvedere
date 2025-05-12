@@ -1,38 +1,42 @@
 <div class="row g-2">
     <div class="col-12 col-xl-8 fw-semi-bold">
-        Apartmán 5
+        {{ "apartment"|trans }} 5
     </div>
 
-    <div class="col-2 d-none">
-        Kapacita
+    <div class="col-2 d-none d-xl-block">
+        {{ "capacity"|trans }}
     </div>
 
-    <div class="col-2 d-none">
-        Cena
+    <div class="col-2 d-none d-xl-block">
+        {{ "price"|trans }}
     </div>
 </div>
 
 <div class="row g-2 mt-2">
     <div class="col-12 col-md-6 col-xl-4">
         <a href="{{ 'apartments/05.jpg'|media }}" class="img">
-            <img src="{{ 'apartments/05.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="Apartmán 5" class="img-fluid w-100">
+            <img src="{{ 'apartments/05.jpg'|media|resize(600, 400, {mode: "crop"}) }}" alt="{{ "apartment"|trans }} 5" class="img-fluid w-100">
         </a>
+        {#        <div class="card h-100">#}
+        {#            <div class="card-body fs-16">#}
+        {#                <span class="fw-semi-bold">Velikost:</span> 47 m<sup>2</sup><br>#}
+        {#                <span class="fw-semi-bold">Ložnice 1:</span><br class="d-sm-none"> 1 velká manželská postel <br>#}
+        {#                <span class="fw-semi-bold">Ložnice 2:</span><br class="d-sm-none"> 3 jednolůžkové postele#}
+        {#            </div>#}
+        {#        </div>#}
     </div>
 
     <div class="col-12 col-md-6 col-xl-4">
         <div class="card h-100">
             <div class="card-body fs-16">
-                Tento útulný apartmán s manželskou postelí King size a jedním pevným lůžkem poskytuje příjemné ubytování
-                pro menší skupiny nebo rodiny. Apartmán je vybaven satelitní televizí, Wi-Fi zdarma a šatní skříní.
-                K dispozici je koupelna se sprchovým koutem. Tento apartmán je ideální volbou pro hosty hledající
-                pohodlné a útulné ubytování.
+                {{ "apartment.05"|trans }}
             </div>
         </div>
     </div>
 
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 capacity">
         <p class="mb-2 mt-0 d-xl-none">
-            Kapacita
+            {{ "capacity"|trans }}
         </p>
 
         <div class="card bg-primary">
@@ -40,7 +44,7 @@
                 <p class="mb-0">
                     <i class="bi bi-person-fill"></i>x3 <br>
 
-                    3 osoby
+                    {{ "persons_count"|trans_choice(3, {value: 3}) }}
                 </p>
             </div>
         </div>
@@ -48,14 +52,14 @@
 
     <div class="col-6 col-sm-4 col-md-3 col-lg-2 price">
         <p class="mb-2 mt-0 d-xl-none">
-            Cena
+            {{ "price"|trans }}
         </p>
 
         <div class="card bg-primary">
             <div class="card-body text-center fs-20 text-white d-flex align-items-center justify-content-center">
                 <p class="mb-0">
                     1950 Kč <br>
-                    / 1 noc
+                    / {{ "nights_count"|trans_choice(1, {value: 1}) }}
                 </p>
             </div>
         </div>
