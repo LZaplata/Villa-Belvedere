@@ -22,6 +22,7 @@
     "nights_count": ":value noc|:value noci|:value nocí",
     "capacity": "Kapacita",
     "price": "Cena",
+    "price_from": "od",
     "apartment": "Apartmán",
     "apartment.01": "Tento útulný apartmán je vybaven třemi samostatnými pevnými lůžky, ideální pro malé skupiny nebo přátele. Nabízí komfortní a klidné prostředí s vlastním bezbariérovým vchodem. Hosté mohou využít satelitní televizi, Wi-Fi zdarma a šatní skříň. Koupelna je vybavena sprchovým koutem. Apartmán je skvělou volbou pro ty, kdo hledají pohodlí a jednoduchý, praktický prostor.",
     "apartment.02": "Prostorný apartmán s manželskou postelí King size, jedním pevným lůžkem nabízí dostatek prostoru pro rodiny nebo větší skupiny. Kromě komfortu je apartmán vybaven vlastním bezbariérovým vchodem, což zajišťuje snadný přístup. Pokoj je vybaven satelitní televizí, Wi-Fi zdarma a šatní skříní. Součástí je koupelna se sprchovým koutem. Tento apartmán je ideální pro ty, kdo chtějí pohodlné a prostorné ubytování s veškerým vybavením.",
